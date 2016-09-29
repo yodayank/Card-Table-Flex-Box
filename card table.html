@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	
+		<title> Wednesday - Flexbox card table </title>
+		<meta charset="utf-8">	
+		<meta name="author" content="Dylan Wolfgram">
+		<meta name="description" content="Introducing properties and styles">
+	<style>
+	
+		#table {
+			height: 600px;
+			width: 100%;
+			background-color: green;
+			
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.card {
+			height: 50%;
+			background-color: white;
+			border-radius: 5px;
+			
+			font-size: 36px;
+			padding: 10px;
+			font-weight: bold;
+			
+			flex:0 0 190px;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.red {
+			color: red;
+		}
+		
+		.top {
+			text-align: left;
+		}
+		
+		.middle {
+			text-align: center;
+		}
+	
+		.middle img {
+			width: 50%;
+		}
+		
+		.bottom {
+			text-align: right;
+		}
+		
+	</style>
+		
+</head>
+<body>
+
+			<div id="table">
+				<div class="card">
+				<div class="top">A</div>
+				<div class="middle">
+				<img src="clubs.jpg">
+			</div>
+				
+				<div class="bottom">A</div>
+			</div>
+			
+			<div class="card red">
+				<div class="top">A</div>
+				<div class="middle">
+				<img src="diamonds.jpg">
+			</div>
+				<div class="bottom">A</div>
+			</div>
+			
+				<div class="card red">
+					<div class="top">A</div>
+					<div class="middle">
+					<img src="hearts.jpg">
+				</div>
+				
+			<div class="bottom">A</div>
+			</div>
+			
+			<div class="card">
+				<div class="top">A</div>
+				<div class="middle">
+				<img src="spades.jpg">
+			</div>
+				
+				<div class="bottom">A</div>
+			</div>
+		</div>
+	
+</body>
+
+	
+</html>
