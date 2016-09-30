@@ -20,18 +20,27 @@
 		
 		.card {
 			height: 50%;
-			background-color: white;
 			border-radius: 5px;
 			
-			font-size: 36px;
-			padding: 10px;
-			font-weight: bold;
 			
 			flex:0 0 190px;
 			
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
+			position: relative;
+			transition: 1.0s;
+			transform-style: preserve-3d;
+		}
+		
+		.front, .back {
+			border-radius: 8px;
+			padding: 10px;
+			width: 100%;
+			height: 100%;
+			
+			backface-visibility: hidden;
+			
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 		.red {
 			color: red;
@@ -53,6 +62,31 @@
 			text-align: right;
 		}
 		
+		.front {
+			background-color: #fff;
+			
+			font-size: 36px;
+			padding: 10px;
+			font-weight: bold;
+			
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+			transform: rotateY(180deg);
+		}
+		
+		.back {
+			background-image: url(cardback.jpg);
+			transform: rotateY(0deg);
+		}
+		
+		.card:hover {
+			transform: rotateY(180deg);
+			margin-bottom: 1000px;
+		}
+		
+		
 	</style>
 		
 </head>
@@ -60,23 +94,30 @@
 
 			<div id="table">
 				<div class="card">
-				<div class="top">A</div>
-				<div class="middle">
-				<img src="clubs.jpg">
+					<div class="front">
+					<div class="top">A</div>
+					<div class="middle">
+						<img src="clubs.jpg">
 			</div>
+				<div class="bottom">A</div>
+				</div>
+					<div class="back"></div>
+					</div>
 				
-				<div class="bottom">A</div>
-			</div>
-			
-			<div class="card red">
-				<div class="top">A</div>
-				<div class="middle">
-				<img src="diamonds.jpg">
-			</div>
-				<div class="bottom">A</div>
-			</div>
 			
 				<div class="card red">
+					<div class="front">
+					<div class="top">A</div>
+					<div class="middle">
+						<img src="diamonds.jpg">
+				</div>
+					<div class="bottom">A</div>
+				</div>
+					<div class="back"></div>
+				</div>
+			
+				<div class="card red">
+					<div class="front">
 					<div class="top">A</div>
 					<div class="middle">
 					<img src="hearts.jpg">
@@ -84,15 +125,20 @@
 				
 			<div class="bottom">A</div>
 			</div>
+			<div class="back"></div>
+			</div>
+			
 			
 			<div class="card">
+				<div class="front">
 				<div class="top">A</div>
 				<div class="middle">
-				<img src="spades.jpg">
+					<img src="spades.jpg">
 			</div>
-				
-				<div class="bottom">A</div>
+			<div class="bottom">A</div>
 			</div>
+			<div class="back"></div>
+		</div>
 		</div>
 	
 </body>
